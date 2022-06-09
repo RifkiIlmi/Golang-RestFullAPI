@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue May 31 07:43:47 2022
+# Make data base, printed on Sun Jun  5 10:56:26 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/97
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:59520
+JOURNAL_STREAM = 8:60542
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -75,15 +75,15 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=65d3a1162317ee84cf660c076295646b
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=8dd7f2fd5bf87a2866992799629c1e14
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/97/usr/share/code/code
 # environment
-MANAGERPID = 2394
+MANAGERPID = 2752
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1191611f-89a2-4e8d-b51f-0628c2c6b6cf.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d0b1ad93-69f4-4220-b601-340810b79cd5.sock
 # environment
 LC_NAME = id_ID.UTF-8
 # environment
@@ -95,13 +95,13 @@ GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/killeruna/go-workspace/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/itzainab:@/tmp/.ICE-unix/2648,unix/itzainab:/tmp/.ICE-unix/2648
+SESSION_MANAGER = local/itzainab:@/tmp/.ICE-unix/3004,unix/itzainab:/tmp/.ICE-unix/3004
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -121,7 +121,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 968c6439681b45dcb35d58ee5d92ee2e
+INVOCATION_ID = 05e54d0a1021493caebaed261a7e7d9e
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -135,7 +135,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4483
+GIO_LAUNCHED_DESKTOP_FILE_PID = 7986
 # automatic
 %F = $(notdir $%)
 # environment
@@ -149,7 +149,7 @@ PWD = /home/killeruna/go-workspace/src/github.com/Rifkiilmi/simplebank
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2581
+SSH_AGENT_PID = 2945
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -243,8 +243,6 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = id_ID.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -282,27 +280,27 @@ WINDOWPATH = 2
 LC_IDENTIFICATION = id_ID.UTF-8
 # default
 .RECIPEPREFIX := 
+ 
 # environment
 LC_ADDRESS = id_ID.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3791
+VSCODE_PID = 8037
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=65d3a1162317ee84cf660c076295646b
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=8dd7f2fd5bf87a2866992799629c1e14
 # variable set hash-table stats:
-# Load=139/1024=14%, Rehash=0, Collisions=23/164=14%
+# Load=138/1024=13%, Rehash=0, Collisions=23/163=14%
 
- 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (device 2067, inode 10754639): 10 files, no impossibilities.
+# . (device 2067, inode 10754639): 15 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -325,7 +323,7 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-.PHONY: postgres createdb dropdb startdb init-migration migrateup migratedown sqlc test
+.PHONY: postgres createdb dropdb startdb init-migration migrateup migratedown sqlc test server
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -338,6 +336,14 @@ sqlc:
 #  recipe to execute (from 'makefile', line 23):
 	sqlc generate
 
+server:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 29):
+	go run main.go
+
 test:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -349,7 +355,7 @@ test:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 20:45:46.700540664
+#  Last modified 2022-06-02 10:17:08.786141547
 #  File has been updated.
 #  Successfully updated.
 
@@ -408,19 +414,19 @@ migratedown:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5439/simple_bank?sslmode=disable" -verbose down
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/33=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/35=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 204 B / avg = 8 B
-# current buf: size = 8162 B / used = 204 B / count = 25 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 246 B / avg = 7 B
+# current buf: size = 8162 B / used = 246 B / count = 31 / avg = 7 B
 
-# strcache performance: lookups = 48 / hit rate = 47%
+# strcache performance: lookups = 56 / hit rate = 44%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Tue May 31 07:43:47 2022
+# Load=31/8192=0%, Rehash=0, Collisions=1/56=2%
+# Finished Make data base on Sun Jun  5 10:56:26 2022
 
  

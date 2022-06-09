@@ -26,6 +26,10 @@ func randomString(n int) string {
 	return sb.String()
 }
 
+func RandomInt() int64 {
+	return rand.Int63()
+}
+
 func RandomOwner() string {
 	return randomString(6)
 }
@@ -34,7 +38,7 @@ func RandomMoney() int64 {
 	return randomNumber(1, 1000)
 }
 func RandomCurrency() string {
-	currencies := []string{"EUR", "IDR", "USD", "CAD"}
+	currencies := []string{EUR, CAD, USD, IDR}
 	n := len(currencies)
 
 	return currencies[rand.Intn(n)]
